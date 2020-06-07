@@ -246,6 +246,7 @@ main .support #sup .cards h3{
 }
 main .software{
     background-color: #EAEEFF;
+    padding-bottom: 0;
 }
 main .software .tree img{
     width: 100%;
