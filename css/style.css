@@ -1,0 +1,452 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    overflow-x:hidden;
+    color: #051441;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.grey-text{
+    color: #677294;
+    font-size: 16px;   
+}
+
+.header{
+    box-sizing: border-box;
+    background-color: #fff;
+    box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+}
+.header ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    overflow-y: scroll;
+    background-color: #fff;
+}
+.header li a{
+    display: block;
+    color: #051441;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 12px 20px;
+    text-decoration: none;
+}
+.header li a:hover{
+    color: #6754E2;
+}
+.header .logo{
+    display: block;
+    float: left;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+.header .menu {
+    clear: both;
+    max-height: 0;
+    transition:max-height .5s ease-in-out;    
+}
+
+.header .menu-icon{
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    padding: 28px 20px;
+    user-select: none;
+}
+
+.header .menu-icon .nav-icon{
+    background-color: #6757c9;
+    display: block;
+    position: relative;
+    height: 2px;
+    width: 18px;
+    transition: background .2s ease-out;
+}
+
+.header .menu-icon .nav-icon:before,.header .menu-icon .nav-icon:after{
+    position: absolute;
+    background-color: #223;
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    transition: all .3s linear;
+}
+.header .menu-icon .nav-icon::before{
+    top: 5px;
+}
+.header .menu-icon .nav-icon:after{
+    top: -5px;
+}
+
+.header .menu-btn{
+    display: none;
+}
+.header .menu-btn:checked ~ .menu{
+    max-height: 160px;
+}
+.header .menu-btn:checked ~ .menu-icon .nav-icon{
+    background: transparent;
+}
+.header .menu-btn:checked ~ .menu-icon .nav-icon:before{
+    transform: rotate(-45deg);
+}
+.header .menu-btn:checked ~ .menu-icon .nav-icon:after{
+    transform: rotate(45deg);
+
+}
+.header .menu-btn:checked ~ .menu-icon:not(.steps).navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after  {
+    top: 0;
+}
+
+.btn, main .integration .flex .cards .btn:hover{
+    background-color: #6754E2;
+    color: #fff;
+    border: none;
+    font-family: 'poppins', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    margin: 15px auto;
+    padding: 12px 35px;
+    border-radius: 40px;
+    outline: none;
+}
+.btn:hover, main .integration .flex .cards .btn{
+    background-color: #fff;
+    color: #6754E2;
+    border: 1px solid #6754E2;
+}
+
+main section{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.heading{
+    text-align: center;
+    padding: 0 15px;
+    padding-top: 100px;
+    background-color: #fafafe;
+    font-family: 'poppins', sans-serif;
+}
+.heading .head{
+    font-size: 26px;
+    font-weight: 500;
+}
+.heading p{
+    line-height: 2;
+    font-size: 18px;
+}
+.heading .head span{
+    font-weight: 700;
+}
+.heading form{
+    position: relative;
+}
+main input{
+    border: 1px solid #ddd;
+    background-color: #fff;
+    padding: 20px 40px;
+    width: 70%;
+    font-size: 16px;
+    border-radius: 40px;
+    margin: 10px auto;
+    outline: none;
+}
+.heading input:active{
+    border: 1px solid #6754E2;
+}
+
+main .heading .banner, main .enrich{
+    margin: 0 15px;
+    text-align: center;
+}
+main .heading .banner img{
+    width: 90%;
+}
+main .enrich{
+    padding-top: 20px;
+}
+main .enrich #brand-img .img{
+    width: 90%;
+    text-align: center;
+    margin: 15px auto;
+    
+}
+main hr{
+    border: 1px solid rgba(225, 229, 232,);
+    margin: 50px 15px;
+    
+}
+main .help{
+    text-align: center;
+    padding: 0 15px;
+    padding-bottom: 50px;
+}
+.section-title{
+    font-weight: 600;
+    text-align: center;
+    font-size: 25px;
+}
+main .help #help-img .block{
+    margin: 20px auto;
+    width: 90%;
+    text-align: center;
+}
+
+main .help #help-img hr{
+    display: none;
+}
+main .help #help-img .btn{
+    display: block;
+}
+main .support{
+    background-color: #fbfbfd;
+    padding: 15px;
+}
+main .support p.grey-text{
+    text-align: center;
+}
+main .support #sup{
+    margin: 50px 0;
+    
+}
+main .support #sup .collab, main .support #sup .tab{
+    width: 100%;
+}
+main .support #sup .tab img{
+    width: 100%;
+    
+}
+main .cards{
+    background-color: #fff;
+    border: 1px solid #fff;
+    box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding:10px 15px;
+    margin: 20px 10px;
+    cursor: pointer;
+    color: #677294;
+}
+
+main .support #sup .cards h3{
+    font-weight: 600;
+    color: #051441;
+}
+main .software{
+    background-color: #EAEEFF;
+    padding:10px;
+}
+main .software .tree img{
+    width: 100%;
+}
+main .software i{
+    color: #6754E2;
+    
+    font-size: 40px;
+    margin-top: 15px;
+}
+main .software .cards{
+    width: 30%;
+    height: auto;
+}
+main .software .cards .content{
+    text-align: center;  
+}
+main .software .cards .content h3{
+    font-weight: 600;
+    color: #051441;
+}
+main .integration{
+    background-color: #fafafe;
+    text-align: center;
+}
+main .integration .flex{
+    justify-content: space-around;
+}
+
+main .integration .flex .cards:hover{
+    border:3px solid #5F2EED;
+}
+main .integration .flex .cards span, main .integration .flex .cards .section-title{
+    color: #3F4451;
+}
+main .integration .flex .cards span{
+    font-weight: 900;
+    font-size: 30px;
+}
+
+main .integration .flex .cards .int-grp .offers-check i{
+    color: #7C54F0;
+    font-size: 20px;
+    margin-right: 10px;
+}
+main .integration .flex .cards .int-grp .offers-times i{
+    color: #F1113B;
+    font-size: 20px;
+    margin-right: 10px;
+}
+main .newsletter{
+    background-color: #f5F7FF;
+    
+}
+main .newsletter .grey-text{
+    text-align: center;
+}
+main .newsletter .trees{
+    width: 100%;
+    z-index: 0;
+    position: relative;
+}
+main .newsletter .trees #tree-left{
+    position: relative;
+    max-width: 35%;
+    bottom: 0;
+    left: 0;
+}
+main .newsletter .trees #tree-right{
+    position: absolute;
+    max-width: 35%;
+    bottom: 0;
+    right: 0;
+    
+}
+main .newsletter .email{
+    position: absolute;
+    width: 70%;
+    text-align: right;
+    top: 40%;
+    left: 10%;
+    z-index: 1;
+}
+main .newsletter .email input{
+    position: relative;
+    
+}
+main .newsletter .email span{
+    position: absolute;
+    
+    font-size: 30px;
+    color: #5F2EED;
+    display: block;
+    top: 16px;
+    right: 5px;
+}
+main .inbetween{
+    height: 50px;
+}
+
+
+
+
+@media(min-width: 768px){ 
+    main .enrich #brand-img{
+        margin: 50px 15px;
+        text-align: center;
+    }
+    main .enrich #brand-img .img{
+        width: 33.33%;
+        
+    }
+    main .help #help-img .block{
+        width: 40%;
+    }
+    main .help #help-img hr{
+        display: block;
+    }
+    main .help #help-img .block img{
+        height:90%;
+    }
+    main form{
+        position: relative;
+    }
+    main input{
+        position: relative;
+    }
+    main form .btn{
+        position: absolute;
+        display: block;
+        width: 170px;
+        top: 1px;
+        right: 13%;
+    }
+    main .software{
+        position: relative;
+    }
+    main .software .tree-card{
+        display: flex;
+        
+    } 
+    main .software .tree{
+        align-self: flex-end;  
+    } 
+    main .software .cards{
+        margin: 20px 5px;
+        width: 25%;
+        
+    }
+    main .newsletter .email input{
+        height: 80px;
+        border-radius: 100px;
+    }
+    main .newsletter .email span{
+        font-size: 55px;
+        top: 25px;
+        right: 10px;
+    }
+}
+
+@media(min-width: 1024px){
+    .header{
+        padding-right: 50px;
+        padding-left: 50px;
+    }
+    .header ul{
+        overflow: hidden;
+    }
+    .header li {
+        float: left;
+    }
+    .header li a {
+        padding: 20px 30px;
+    }
+    .header .menu {
+        clear: none;
+        float: right;
+        max-height: none;
+    }
+    .header .menu-icon {
+        display: none;
+    }
+    main .enrich #brand-img .img{
+        width: auto;
+    }
+    main .support #sup .collab{
+        width: 25%;
+    }
+    main .support #sup .collab .cards{
+        margin: 15px 0;
+    }
+     main .support #sup .tab{
+        width: 55%;
+    }
+    main .software .tree-card{
+        justify-content: space-between;
+    }
+    main .integration .flex .cards{
+        width: 25%;
+    }
+
+} 
