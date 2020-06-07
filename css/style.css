@@ -130,8 +130,7 @@ html, body{
 }
 
 main section{
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding: 50px 35px;
 }
 
 .heading{
@@ -247,7 +246,6 @@ main .support #sup .cards h3{
 }
 main .software{
     background-color: #EAEEFF;
-    padding:10px;
 }
 main .software .tree img{
     width: 100%;
