@@ -1,3 +1,4 @@
+
 html, body{
     margin: 0;
     padding: 0;
@@ -24,6 +25,7 @@ html, body{
     box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
     position: fixed;
     width: 100%;
+    z-index: 1;
 }
 .header ul{
     margin: 0;
@@ -239,6 +241,9 @@ main .cards{
     cursor: pointer;
     color: #677294;
 }
+main .cards:hover{
+    box-shadow: 1px 1px 10px #051441;
+}
 
 main .support #sup .cards h3{
     font-weight: 600;
@@ -258,7 +263,7 @@ main .software i{
     margin-top: 15px;
 }
 main .software .cards{
-    width: 30%;
+    width: 80%;
     height: auto;
 }
 main .software .cards .content{
@@ -275,10 +280,13 @@ main .integration{
 main .integration .flex{
     justify-content: space-around;
 }
-
-main .integration .flex .cards:hover{
-    border:3px solid #5F2EED;
+main .integration #int3 hr{
+    margin-top: 40px;
 }
+
+/* main .integration .flex .cards:hover{
+    border:3px solid #5F2EED;
+} */
 main .integration .flex .cards span, main .integration .flex .cards .section-title{
     color: #3F4451;
 }
@@ -299,7 +307,8 @@ main .integration .flex .cards .int-grp .offers-times i{
 }
 main .newsletter{
     background-color: #f5F7FF;
-    
+    padding: 0;
+    padding-top: 50px;
 }
 main .newsletter .grey-text{
     text-align: center;
@@ -326,7 +335,7 @@ main .newsletter .email{
     position: absolute;
     width: 70%;
     text-align: right;
-    top: 40%;
+    top: 20%;
     left: 10%;
     z-index: 1;
 }
@@ -336,19 +345,72 @@ main .newsletter .email input{
 }
 main .newsletter .email span{
     position: absolute;
-    
     font-size: 30px;
+    cursor: pointer;
     color: #5F2EED;
     display: block;
     top: 16px;
     right: 5px;
 }
-main .inbetween{
-    height: 50px;
+footer{
+    padding-top: 20px;
+    background-color: #413C85;
+    color: #fff;
 }
 
-
-
+footer .footer-section, 
+footer .logo-brands{
+    width: 90%;
+    /* margin-left: 10px; */
+}
+footer .footer-section .footer-title, 
+footer #all-content .logo-brands img{
+    padding-bottom: 18px;
+    font-weight: 500;
+}
+footer .footer-section .footer-text, 
+footer #all-content .logo-brands #copyright{
+    color: #bab5df;
+    cursor: pointer;
+    line-height: 25px;
+    font-size: 15px;
+    font-weight: 500;
+}
+footer .footer-section .footer-text:hover, 
+footer #all-content .logo-brands #copyright:hover,
+footer #all-content .logo-brands .social-media i:hover{
+    color: #fff;
+}
+footer #all-content .logo-brands .social-media i{
+    padding-right: 15px;
+    width: 30px;
+    cursor: pointer;
+    font-size: 30px;
+    color: #bab5df;
+}
+footer #footer-images{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+footer #footer-images #people-center{
+    width: 100%;
+    text-align: center;
+    
+}
+footer #footer-images #right-leaf #footer-man{
+    display: none;
+}
+footer #footer-images #left-leaf, 
+footer #footer-images #right-leaf{
+    width: 150px;
+    margin-top: 50px;
+    order: 1;
+}
+footer #footer-images #left-leaf img, 
+footer #footer-images #right-leaf img{
+    width: 100%;
+}
 
 @media(min-width: 768px){ 
     main .enrich #brand-img{
@@ -405,7 +467,56 @@ main .inbetween{
         top: 25px;
         right: 10px;
     }
+    footer #all-content .footer-section{
+        width: 22%;
+        
+    }
+    footer #all-content .logo-brands{
+        width: 24%;
+        margin-top: 10px;
+    }
+    footer .social-media{
+        margin-top: 50px;
+    }
+    footer #all-content .logo-brands .social-media i{
+        padding-right: 3%;
+    }
+    footer #all-content .logo-brands #copyright{
+        line-height: 35px;
+    }
+    footer #footer-images{
+        display: block;
+        position: relative;
+        width: 100%;
+        padding-top: 60px;
+    }
+    footer #footer-images #left-leaf, 
+    footer #footer-images #right-leaf{
+        width: auto;
+        position: absolute;
+        bottom: 0;
+        width: 220px;
+    }
+    footer #texts{
+        width: 100%;
+        padding-left: 50px;
+        /* padding: 0 20px; */
+        margin: 50px 0;
+    }
+    
+    footer #footer-images #left-leaf{
+        left: 0;
+    }
+    footer #footer-images #right-leaf{       
+        right: 0;       
+    }
+    footer #footer-images #people-center{
+        position: relative;
+        text-align: center;
+        bottom: 30px;
+    }
 }
+
 
 @media(min-width: 1024px){
     .header{
@@ -447,5 +558,17 @@ main .inbetween{
     main .integration .flex .cards{
         width: 25%;
     }
-
+    footer #footer-images #right-leaf #footer-man{
+        display: inline-block;
+        position: absolute;
+        left: -50px;
+        bottom: 0;
+    }
 } 
+
+
+@media(max-width: 1024px){
+    footer{
+        margin-top: 150px;
+    }
+}
