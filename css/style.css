@@ -369,7 +369,7 @@ footer #all-content .logo-brands img{
     font-weight: 500;
 }
 footer .footer-section .footer-text, 
-footer #all-content .logo-brands #copyright{
+footer #all-content .logo-brands #copyright, footer #copyright{
     color: #bab5df;
     cursor: pointer;
     line-height: 25px;
